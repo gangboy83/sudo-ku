@@ -4,16 +4,15 @@ package gui;
  * This class instantiates a graphical window or container frame for displaying
  * java graphical buttons.
  * 
- * @author Alvin Moradi with contributions from the "TEAM AWESOME SAUCE"
+ * @author Alvin Moradi with contributions from the "AWESOME SAUCE" team
  * @version 1.0
  *
  */
 
-import gui.comps.*;
 import java.awt.*;
 import javax.swing.*;
-import javax.swing.border.*;
 
+@SuppressWarnings("serial")
 public class Window extends JFrame {
 	
 	/**

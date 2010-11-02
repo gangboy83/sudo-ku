@@ -28,11 +28,11 @@ public class GuiApp {
         //Display the window.
         window.pack();
         window.setVisible(true);
-	}
-	
+	}	
 	
     /**
-     * This is the driver for the entire Sudoku game, while using the GUI display rather than console.
+     * This is the driver for the entire application, while using the GUI 
+     * as a interactive display rather than console.
      * 
      * @param args An array of arguments from the command line.
      */
@@ -40,7 +40,8 @@ public class GuiApp {
         //Schedule a job for the event-dispatching thread:
         //creating and showing this application's GUI.
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
-            public void run() {
+            @Override
+			public void run() {
                 createAndShowGUI();
             }
         });

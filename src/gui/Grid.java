@@ -4,33 +4,21 @@ package gui;
  * This class creates and provides a panel on which a Sudoku alike grid is shown. It initiates
  * this grid using a parameter of values provided through the constructor.
  * 
- * @author Alvin Moradi with contributions from the "TEAM AWESOME SAUCE"
+ * @author Alvin Moradi with contributions from the "AWESOME SAUCE" team
  * @version 1.0
  *
  */
 
-import gui.comps.AbstractCell;
-import gui.comps.EditableCell;
-import gui.comps.StaticCell;
-
-import java.awt.BasicStroke;
-import java.awt.BorderLayout;
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.Graphics;
-import java.awt.Graphics2D;
-import java.awt.GridBagConstraints;
-import java.awt.GridLayout;
-
+import java.awt.*;
 import javax.swing.*;
 
-import javax.swing.*;
-import javax.swing.table.*;
+import gui.element.*;
 
+@SuppressWarnings("serial")
 public class Grid extends JPanel {
 
 	JButton button;
-	AbstractCell[][] cells;
+	Cell[][] cells;
 	int[][] values;
 	
 	/**
@@ -51,7 +39,7 @@ public class Grid extends JPanel {
 		
 		GridBagConstraints c = new GridBagConstraints();
 		GridLayout layout = new GridLayout(9,9);
-		cells = new AbstractCell[9][9];
+		cells = new Cell[9][9];
 		layout.setHgap(0);
 		layout.setVgap(0);
 
@@ -70,6 +58,7 @@ public class Grid extends JPanel {
 	/* (non-Javadoc)
 	 * @see javax.swing.JComponent#paintComponent(java.awt.Graphics)
 	 */
+	@Override
 	public void paintComponent(Graphics g) {	  
 		
 		//parent component must always be called.
